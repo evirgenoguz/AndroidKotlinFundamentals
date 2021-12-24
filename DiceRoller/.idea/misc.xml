@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/DiceRoller/app/src/main/res/drawable/dice_1.xml" value="0.2222222222222222" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/DiceRoller/app/src/main/res/drawable/dice_2.xml" value="0.22135416666666666" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/DiceRoller/app/src/main/res/drawable/dice_3.xml" value="0.2222222222222222" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/DiceRoller/app/src/main/res/drawable/dice_4.xml" value="0.2222222222222222" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/DiceRoller/app/src/main/res/drawable/dice_6.xml" value="0.2222222222222222" />
         <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/DiceRoller/app/src/main/res/layout/activity_main.xml" value="0.22" />
       </map>
     </option>

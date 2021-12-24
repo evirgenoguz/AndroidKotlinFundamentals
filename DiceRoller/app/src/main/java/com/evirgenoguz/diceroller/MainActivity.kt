@@ -1,16 +1,23 @@
 package com.evirgenoguz.diceroller
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var diceImage: ImageView
+    lateinit var diceImage2: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
 
         var rollButton: Button = findViewById(R.id.roll_button)
@@ -25,42 +32,55 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun resetRoll() {
-        val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = "0"
+
+        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val diceImage2: ImageView = findViewById(R.id.dice_image2)
+
+        diceImage.setImageResource(R.drawable.empty_dice)
+        diceImage2.setImageResource(R.drawable.empty_dice)
     }
 
     private fun countUp() {
         Toast.makeText(this, "countUp button clicked", Toast.LENGTH_LONG).show()
 
-        val resultText: TextView = findViewById(R.id.result_text)
+        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val diceImage2: ImageView = findViewById(R.id.dice_image2)
 
-        if (resultText.text == "Hello World!") {
 
-            resultText.text = "1"
 
-        } else {
 
-            var currentNumber = resultText.text.toString().toInt()
-
-            if (currentNumber < 6) {
-
-                currentNumber++
-                resultText.text = currentNumber.toString()
-
-            }
-        }
     }
 
     private fun rollDice() {
-        val randomInt = (1..6).random()
 
-        Toast.makeText(this, "button clicked", Toast.LENGTH_LONG).show()
-        val resultText: TextView = findViewById(R.id.result_text)
+
         val resetButton: Button = findViewById(R.id.reset_button)
 
-        resultText.text = randomInt.toString()
+        val diceImage: ImageView = findViewById(R.id.dice_image)
+        val diceImage2: ImageView = findViewById(R.id.dice_image2)
+
+        diceImage.setImageResource(getRandomDiceImage())
+        diceImage2.setImageResource(getRandomDiceImage())
+
+
+
         resetButton.visibility = View.VISIBLE
     }
 
+    private fun getRandomDiceImage() : Int {
+
+        val randomInt = (1..6).random()
+
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+
+        return drawableResource
+    }
 }
 
