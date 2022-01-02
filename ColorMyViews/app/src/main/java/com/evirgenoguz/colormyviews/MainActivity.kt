@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             R.id.box_four_text -> view.setBackgroundColor(Color.MAGENTA)
             R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
 
-           
+
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
