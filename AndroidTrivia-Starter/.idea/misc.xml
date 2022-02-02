@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/AndroidTrivia-Starter/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/AndroidTrivia-Starter/app/src/main/res/layout/fragment_rules.xml" value="0.35260416666666666" />
         <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/AndroidTrivia-Starter/app/src/main/res/layout/placeholder_layout.xml" value="0.1983695652173913" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/AndroidTrivia-Starter/app/src/main/res/menu/navdrawer_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/AndroidTrivia-Starter/app/src/main/res/menu/options_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/AndroidTrivia-Starter/app/src/main/res/menu/winner_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
