@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.begumyolcu.urunlerroomapp.databinding.FragmentUrunGuncelleBinding
@@ -15,6 +16,7 @@ class UrunGuncelleFragment : Fragment() {
     private lateinit var binding: FragmentUrunGuncelleBinding
     private lateinit var urun: UrunModel
     private lateinit var urunDB: UrunlerDatabase
+    private lateinit var urunViewModel: UrunViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +27,20 @@ class UrunGuncelleFragment : Fragment() {
 
         val bundle: UrunGuncelleFragmentArgs by navArgs()
         urun = bundle.urun
+
+
+        val application = requireNotNull(this.activity).application
+        val dataSource = UrunlerDatabase.getUrunlerDatabase(application)?.urunlerDao
+
+        val viewModelFactory = dataSource?.let {
+            UrunViewModelFactory(it, application)
+        }
+        urunViewModel = viewModelFactory?.let {
+            ViewModelProvider(this, it).get(UrunViewModel::class.java)
+        }!!
+
+        binding.setLifecycleOwner(this)
+
         return binding.root
     }
 
@@ -55,6 +71,7 @@ class UrunGuncelleFragment : Fragment() {
 
             buttonUrunSil.setOnClickListener {
                 //TODO: DB urun sil
+                urunViewModel.silUrun(urun)
 
                 findNavController().navigate(R.id.guncelleToAnasayfa)
             }
