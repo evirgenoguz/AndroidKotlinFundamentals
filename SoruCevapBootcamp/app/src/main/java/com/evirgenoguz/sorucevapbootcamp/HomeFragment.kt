@@ -17,9 +17,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button.setOnClickListener {
+        binding.buttonQuestion.setOnClickListener {
             //findNavController().navigate(R.id.action_homeFragment_to_questionFragment)
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToQuestionFragment())
+        }
+
+        binding.buttonLogin.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionGlobalLogin())
         }
 
 

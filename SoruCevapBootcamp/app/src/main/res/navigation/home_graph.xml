@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.evirgenoguz.sorucevapbootcamp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.evirgenoguz.sorucevapbootcamp.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_confirmationDialog"
+            app:destination="@id/confirmationDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.evirgenoguz.sorucevapbootcamp.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="answer"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/confirmationDialog"
+        android:name="com.evirgenoguz.sorucevapbootcamp.ConfirmationDialog"
+        tools:layout="@layout/confirmation_dialog"
+        android:label="ConfirmationDialog" >
+        <action
+            android:id="@+id/action_confirmationDialog_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="answer"
+            app:argType="string" />
+    </dialog>
+
+
+    <navigation android:id="@+id/login"
+        app:startDestination="@id/loginFragment">
+        <dialog
+            android:id="@+id/loginSuccessDialog"
+            android:name="com.evirgenoguz.sorucevapbootcamp.LoginSuccessDialog"
+            android:label="LoginSuccessDialog"
+            tools:layout="@layout/dialog_login_success" />
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.evirgenoguz.sorucevapbootcamp.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_passwordFragment"
+                app:destination="@id/passwordFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/passwordFragment"
+            android:name="com.evirgenoguz.sorucevapbootcamp.PasswordFragment"
+            android:label="PasswordFragment"
+            tools:layout="@layout/fragment_password">
+            <action
+                android:id="@+id/action_passwordFragment_to_loginSuccessDialog"
+                app:destination="@id/loginSuccessDialog" />
+        </fragment>
+    </navigation>
+    <action
+        android:id="@+id/action_global_login"
+        app:destination="@id/login" />
+</navigation>

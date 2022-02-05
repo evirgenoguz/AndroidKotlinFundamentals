@@ -4,9 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/dialog_login_success.xml" value="0.36666666666666664" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/dialog_message.xml" value="0.36666666666666664" />
         <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
-        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/fragment_question.xml" value="0.2017167381974249" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/fragment_password.xml" value="0.36666666666666664" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/fragment_question.xml" value="0.25" />
         <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/layout/fragment_result.xml" value="0.25679347826086957" />
+        <entry key="..\:/Dev/AndroidProjects/AndroidKotlinFundamentals/SoruCevapBootcamp/app/src/main/res/menu/menu_bottom_nav.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

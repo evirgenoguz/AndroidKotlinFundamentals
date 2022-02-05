@@ -24,9 +24,13 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
             /*
             findNavController().navigate(R.id.action_questionFragment_to_resultFragment, bundleOf("answer" to answer))
             */
-            findNavController().navigate(QuestionFragmentDirections.actionQuestionFragmentToResultFragment(
+            findNavController().navigate(QuestionFragmentDirections.actionQuestionFragmentToConfirmationDialog(
                 answer
             ))
+        }
+
+        binding.buttonLogin.setOnClickListener {
+            findNavController().navigate(QuestionFragmentDirections.actionGlobalLogin())
         }
 
     }
